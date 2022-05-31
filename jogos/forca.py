@@ -31,9 +31,10 @@ def jogar():
         print("Chances restantes: ", (7 - erros))
 
     if acertou:
-        imprime_mensagem_vencedor(erros)
+        imprime_mensagem_vencedor()
     else:
-        imprime_mensagem_perdedor(palavra_secreta)
+        print("A palavra era {}".format(palavra_secreta))
+        imprime_mensagem_perdedor()
 
 
 def imprime_mensagem_abertura():
@@ -126,8 +127,8 @@ def desenha_forca(erros):
     print()
 
 
-def imprime_mensagem_vencedor(erros):
-    print("\nParabéns, você ganhou com {} tentativas restantes".format(7 - erros))
+def imprime_mensagem_vencedor():
+    print("\nParabéns, você ganhou")
     print("       ___________      ")
     print("      '._==_==_=_.'     ")
     print("      .-\\:      /-.    ")
@@ -140,9 +141,8 @@ def imprime_mensagem_vencedor(erros):
     print("        '-------'       ")
 
 
-def imprime_mensagem_perdedor(palavra_secreta):
-    print("\nPuxa, você foi enforcado!")
-    print("A palavra era {}".format(palavra_secreta))
+def imprime_mensagem_perdedor():
+    print("\nQue pena, você perdeu")
     print("    _______________         ")
     print("   /               \       ")
     print("  /                 \      ")
